@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Tests (Local only)
+tests/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+
+# Model Checkpoints
+checkpoints/
+
+# Dataset & Data Files
+/dataset/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Ignore all markdown files except README.md
+*.md
+!README.md
