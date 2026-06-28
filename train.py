@@ -167,9 +167,9 @@ def main():
 
     # Generate plotting results
     print("\nGenerating final plots...")
-    plot_training_history(log_path, 'visualisasi_plots')
-    plot_confusion_matrix(test_y_true, test_y_pred, 'visualisasi_plots')
-    plot_prediction_grid(model, test_loader, device, 'visualisasi_plots')
+    plot_training_history(log_path, 'visualisasi_plots', args.model)
+    plot_confusion_matrix(test_y_true, test_y_pred, 'visualisasi_plots', args.model)
+    plot_prediction_grid(model, test_loader, device, 'visualisasi_plots', args.model)
     print("Plots generated successfully in 'visualisasi_plots/'")
 
 if __name__ == '__main__':

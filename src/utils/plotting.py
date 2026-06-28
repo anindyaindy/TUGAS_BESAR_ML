@@ -6,7 +6,7 @@ import torch
 import numpy as np
 from sklearn.metrics import confusion_matrix
 
-def plot_training_history(csv_path, save_dir):
+def plot_training_history(csv_path, save_dir, model_name='model'):
     """
     Plots training and validation loss and accuracy curves over epochs.
     """
@@ -32,10 +32,10 @@ def plot_training_history(csv_path, save_dir):
     axes[1].legend()
     
     plt.tight_layout()
-    plt.savefig(os.path.join(save_dir, 'training_history.png'), dpi=150)
+    plt.savefig(os.path.join(save_dir, f'{model_name}_training_history.png'), dpi=150)
     plt.close()
 
-def plot_confusion_matrix(y_true, y_pred, save_dir):
+def plot_confusion_matrix(y_true, y_pred, save_dir, model_name='model'):
     """
     Plots raw and normalized confusion matrices.
     """
@@ -59,10 +59,10 @@ def plot_confusion_matrix(y_true, y_pred, save_dir):
     axes[1].set_xlabel('Predicted Label')
     
     plt.tight_layout()
-    plt.savefig(os.path.join(save_dir, 'confusion_matrix.png'), dpi=150)
+    plt.savefig(os.path.join(save_dir, f'{model_name}_confusion_matrix.png'), dpi=150)
     plt.close()
 
-def plot_prediction_grid(model, dataloader, device, save_dir):
+def plot_prediction_grid(model, dataloader, device, save_dir, model_name='model'):
     """
     Generates a 4x4 visual prediction grid using 16 batch images,
     coloring correct predictions in green and incorrect predictions in red.
@@ -128,5 +128,5 @@ def plot_prediction_grid(model, dataloader, device, save_dir):
         ax.set_title(f"T: {true_label_str} | P: {pred_label_str}\nConf: {prob*100:.1f}%", color=title_color, fontsize=10)
         
     plt.tight_layout()
-    plt.savefig(os.path.join(save_dir, 'prediction_grid.png'), dpi=150)
+    plt.savefig(os.path.join(save_dir, f'{model_name}_prediction_grid.png'), dpi=150)
     plt.close()
