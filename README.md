@@ -7,7 +7,7 @@ Proyek ini dibangun untuk mendeteksi manipulasi wajah atau deepfake dengan memba
 ## Nama Anggota Kelompok
 
 *   **Anindya Sukma Dwiyanda** - NIM: `103132400006`
-*   **Jeremy Marcello** - NIM: `2311110003`
+*   **Jeremy Marcello Waani** - NIM: `2311110003`
 
 ---
 
